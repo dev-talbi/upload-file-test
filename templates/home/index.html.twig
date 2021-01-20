@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<div class="container d-flex justify-content-center">
+    {% if app.user %}
+    <a id="margin-10" href="profile/5"><button class="btn btn-success">Mes fichiers</button></a>
+    {% else %}
+    <a id="margin-10" href="login"><button class="btn btn-primary">connexion</button></a>
+    {% endif %}
+</div>
+
+{% endblock %}

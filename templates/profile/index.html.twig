@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfileController!{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Mes fichiers</h1>
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            {{form_start(uploadForm)}}
+            {{ form_widget(uploadForm.upload) }}
+            {{ form_widget(uploadForm.name) }}
+            <button class="btn btn-lg btn-primary" type="submit">Envoyer</button>
+
+            {{form_end(uploadForm)}}
+        </div>
+        <div class="col-md-12 d-flex justify-content-center">
+            <ul class="margin">
+                {% for document in documents %}
+                <li>{{ document.name }}
+                    <a href="../uploads/files/{{ document.upload}}"> <i class="fas fa-cloud-download-alt"></i></a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

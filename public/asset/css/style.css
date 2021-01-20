@@ -1,0 +1,22 @@
+.margin{
+    margin-top: 3%;
+}
+
+.custom-file-label::before{
+    content: "choisir un fichier";
+}
+
+.custom-file-label::after{
+    content: "chercher";
+}
+
+ul{
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#margin-10{
+    margin-top: 10%;
+}
+
