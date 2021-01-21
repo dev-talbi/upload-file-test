@@ -20,3 +20,19 @@ ul{
     margin-top: 10%;
 }
 
+.container-button{
+    display: block;
+}
+
+.trash{
+    display: contents;
+    color: rgb(240, 63, 63);
+}
+
+table{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+

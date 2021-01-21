@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserDocument index{% endblock %}
+
+{% block body %}
+    <h1>UserDocument index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Upload</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user_document in user_documents %}
+            <tr>
+                <td>{{ user_document.id }}</td>
+                <td>{{ user_document.name }}</td>
+                <td>{{ user_document.upload }}</td>
+                <td>
+                    <a href="{{ path('user_document_show', {'id': user_document.id}) }}">show</a>
+                    <a href="{{ path('user_document_edit', {'id': user_document.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_document_new') }}">Create new</a>
+{% endblock %}
